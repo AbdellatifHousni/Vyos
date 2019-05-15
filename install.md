@@ -10,6 +10,7 @@ vyos@vyos#
 Configure network interfaces:
 ```
 set interfaces ethernet eth0 address dhcp
+set interfaces ethernet eth0 address dhcpv6
 set interfaces ethernet eth0 description 'OUTSIDE'
 set interfaces ethernet eth1 address '192.168.0.1/24'
 set interfaces ethernet eth1 description 'INSIDE'
@@ -51,8 +52,9 @@ And a DNS forwarder:
 ```
 set service dns forwarding cache-size '0'
 set service dns forwarding listen-on 'eth1'
+set service dns forwarding name-server '192.168.1.1'
 set service dns forwarding name-server '8.8.8.8'
-set service dns forwarding name-server '8.8.4.4'
+set service dns forwarding name-server '1.1.1.1'
 ```
 
 Add a set of firewall policies for our "Outside" interface:
