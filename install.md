@@ -35,7 +35,7 @@ set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 domain-nam
 set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 lease '86400'
 ```
 
->= 1.2.0
+'>= 1.2.0
 ```
 set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 range 0 start 192.168.0.9
 set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 range 0 stop '192.168.0.254'
